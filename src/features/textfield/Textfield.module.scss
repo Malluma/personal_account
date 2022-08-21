@@ -1,0 +1,29 @@
+@import "../../sryles//variables.scss";
+
+.textfield{
+  background: $background-color;
+  font-family: inherit;
+  font-size: 14px;
+  display: block;
+  margin: 0;
+  border: 1px solid $color-main-light;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: 100%;
+  color: $color-main-darker;
+  padding: 12px 14px;
+
+  &:hover,
+  &:focus {
+    border: 1px solid $color-main-dark;
+    outline: none;
+  }
+
+  &::placeholder {
+    color: $color-main-light;
+  }
+
+  &_focus {
+    border: 1px solid $color-main-dark;
+  }
+}
