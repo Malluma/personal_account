@@ -1,4 +1,4 @@
-@import "../../sryles//variables.scss";
+@import "../../styles/variables.scss";
 
 .loginForm{
   padding: 2.5em 1.8em 2em 1.8em;
@@ -17,6 +17,10 @@
   margin-bottom: 0.65em;
 }
 
-.username{
-  margin-bottom: 1rem;
+.email{
+  margin-bottom: 1.5vmin;
+}
+
+.password{
+  margin-bottom: 3vmin;
 }

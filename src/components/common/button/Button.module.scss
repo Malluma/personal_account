@@ -1,0 +1,25 @@
+@import "../../../styles//variables.scss";
+
+.button {
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 22px;
+  width: 100%;
+  display: block;
+  text-decoration: none;
+  background: $primaryGradient;
+  color: $background-color;
+  padding: 0.8em;
+  &:hover,
+  &:focus {
+    outline: none;
+    opacity: 0.5;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}

@@ -1,9 +1,9 @@
-@import "../../sryles//variables.scss";
+@import "../../../styles//variables.scss";
 
-.textfield{
+.input{
   background: $background-color;
   font-family: inherit;
-  font-size: 14px;
+  font-size: calc(6px + 1vmin);
   display: block;
   margin: 0;
   border: 1px solid $color-main-light;
@@ -11,7 +11,7 @@
   box-sizing: border-box;
   width: 100%;
   color: $color-main-darker;
-  padding: 12px 14px;
+  padding: calc(4px + 1vmin) calc(6px + 1vmin);
 
   &:hover,
   &:focus {
