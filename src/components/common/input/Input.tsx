@@ -6,12 +6,13 @@ interface inputProps {
   value: string,
   placeholder: string,
   pattern?: string,
+  disabled?: boolean,
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-const Input: React.FC<inputProps> = function ({name, type, pattern, value, placeholder, onChange}) {
+const Input: React.FC<inputProps> = function ({name, type, pattern, value, placeholder, disabled, onChange}) {
   return (
-    <input name={name} type={type} pattern={pattern} value={value} className={styles.input} placeholder={placeholder} onChange={onChange}></input>
+    <input name={name} type={type} pattern={pattern} value={value} className={styles.input} placeholder={placeholder} disabled={disabled} onChange={onChange}></input>
   );
 }
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import LoginForm from './components/loginForm/LoginForm';
 import Contacts from './components/contacts/Contacts';
+import { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import './App.css';
 import { useAppSelector, useAppDispatch } from './app/hooks';
@@ -21,9 +22,11 @@ function App() {
       .catch((error) => console.error("error", error));
   }
 
-
-  loadContactsFromDB();
   
+  useEffect(() => {
+    loadContactsFromDB();
+  }, []);
+
   return (
       <div className="App">
         <Routes>

@@ -1,0 +1,66 @@
+@import "../../styles/variables.scss";
+
+.contactWrapper{
+  display: flex;
+  justify-content: space-between;
+  margin-right: 4rem;
+  margin-bottom: 1vmin;
+  padding-bottom: 0.2vmin;
+  border-bottom: 1px solid $color-main-lighter;
+}
+
+.contact{
+  font-size: calc(6px + 1vmin);
+  display: flex;
+  flex-grow: 1;
+}
+
+.contactName{
+  font-size: calc(6px + 1vmin);
+  border: $background-color-darker;
+  margin-right: 0.6rem;
+  width: 67%;
+}
+
+.contactPhone{
+  color: $color-main-dark;
+}
+
+.iconBtn{
+  width: calc(1.5rem + 3vmin);
+  height: auto;
+  border: none;
+  background: none;
+  &:focus {
+    outline: none;
+  }
+  &:focus * {
+    fill: $primaryColorLight;
+  }
+  & > svg {
+    fill: $primaryColor;
+    cursor: pointer;
+    &:hover,
+    &:focus {
+      fill: $primaryColorLight;
+    }
+  }
+}
+
+.contactBtn{
+  width: calc(1.4rem + 1vmin);
+  &:focus * {
+    fill: $primaryColor;
+  }
+  & > svg {
+    fill: $primaryColorLight;
+    &:hover,
+    &:focus {
+      fill: $primaryColor;
+    }
+  }
+}
+
+.deleteBtn{
+  width: 1.2vmin;
+}

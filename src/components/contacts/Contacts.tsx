@@ -3,11 +3,9 @@ import { useAppSelector, useAppDispatch } from "../../app/hooks";
 import { addContact, delContact } from "../../app/reducers/contactsSlice";
 import React, { MouseEvent, useState } from "react";
 import { ReactComponent as Plus } from "../../assets/plus-icon.svg";
-import { ReactComponent as DeleteIcon } from "../../assets/delete-icon.svg";
 import { ReactComponent as SearchIcon } from "../../assets/search-icon.svg";
-import { ReactComponent as EditIcon } from "../../assets/edit-icon.svg";
-import { ReactComponent as SaveIcon } from "../../assets/save-icon.svg";
 import Input from "../common/input/Input";
+import Contact from "../contact/Contact";
 
 function Contacts() {
   const dispatch = useAppDispatch();
@@ -93,38 +91,8 @@ function Contacts() {
     <div>
       {filteredContacts.map((el, index) => {
         return (
-          <div key={index} className={styles.contactWrapper}>
-            <div className={styles.contact}>
-              <input className={styles.contactName}
-                type="text"
-                value={el.name}
-                disabled
-                //onChange={(e) => handleNewContactPhoneChange(e)}
-              ></input>
-              <div className={styles.contactPhone}>
-                {el.phone}
-              </div>
-            </div>
-            <div>
-              <button
-                  className={`${styles.iconBtn} ${styles.contactEditBtn}`}
-                  onClick={(e) => handleDeleteBtnClick(e, el.id)}>
-                <EditIcon /> 
-              </button>
-              <button
-                  className={`${styles.iconBtn} ${styles.contactEditBtn}`}
-                  onClick={(e) => handleDeleteBtnClick(e, el.id)}>
-                <SaveIcon /> 
-              </button>
-              <button
-                  className={`${styles.iconBtn} ${styles.contactEditBtn} ${styles.deleteBtn}`}
-                  onClick={(e) => handleDeleteBtnClick(e, el.id)}>
-                <DeleteIcon /> 
-              </button>
-            </div>
-          </div>
-        );
-        })}
+          <Contact key ={el.id} id={el.id} name={el.name} phone={el.phone} />
+        );})}
       </div>
       <div></div>
     </form>
