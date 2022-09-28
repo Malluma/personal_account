@@ -2,7 +2,7 @@ import React from 'react';
 import LoginForm from './components/loginForm/LoginForm';
 import Contacts from './components/contacts/Contacts';
 import { useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import { Routes, Route} from 'react-router-dom';
 import './App.css';
 import { useAppSelector, useAppDispatch } from './app/hooks';
 import { loadContacts } from './app/reducers/contactsSlice';
@@ -24,7 +24,7 @@ function App() {
 
   
   useEffect(() => {
-    loadContactsFromDB();
+  loadContactsFromDB();
   }, []);
 
   return (
@@ -32,7 +32,7 @@ function App() {
         <Routes>
           <Route path='/' element={<LoginForm />} />
           {<Route path='/contacts' element={<Contacts />} />}
-        </Routes>
+        </Routes> 
       </div>
   );
 }

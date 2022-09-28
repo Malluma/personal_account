@@ -2,7 +2,7 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 export interface IContact {
   id: string;
-  name:string;
+  name: string;
   phone: string;
 }
 
@@ -22,13 +22,15 @@ export const contactsSlice = createSlice({
       state.contacts.push({id: new Date().toISOString(), name: action.payload.name, phone: action.payload.phone });
     },
     delContact: (state, action: PayloadAction<{ id: string }>) => {
-      console.log(action.payload.id)
+      
       let indexToDelete: number = -1;
+      const idToDelete = action.payload.id;
+
       state.contacts.find((contact, index) => {
-        if (contact.id === action.payload.id) {
+        if (contact.id === idToDelete) {
           indexToDelete = index;
         }
-        return contact.id === action.payload.id;
+        return contact.id === idToDelete;
       })
       state.contacts.splice(indexToDelete, 1);
   

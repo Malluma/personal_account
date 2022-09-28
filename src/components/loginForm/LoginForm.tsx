@@ -1,7 +1,7 @@
 import styles from "./LoginForm.module.scss";
 import Input from "../common/input/Input";
 import Button from "../common/button/Button";
-import { useAppSelector, useAppDispatch } from "../../app/hooks";
+import { useAppDispatch } from "../../app/hooks";
 import { login } from "../../app/reducers/authSlice";
 import React, { useState } from "react";
 import {useNavigate} from "react-router-dom";
