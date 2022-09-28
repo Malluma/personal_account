@@ -12,6 +12,11 @@ React, Redux, Typescript, css modules.
 
 Для маски номера телефона использован плагин text-mask: https://github.com/text-mask/text-mask/tree/master/react, https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/types/react-text-mask/index.d.ts#L11.
 
+Страница входа:
+![Внешний вид приложения: страница входа](./imagesForReadMe/login.jpg)
+Страница контактов:
+![Внешний вид приложения: страница контактов](./imagesForReadMe/contacts.jpg)
+
 ## Данные для входа в личный кабинет
 "users": [
     {
