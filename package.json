@@ -1,5 +1,6 @@
 {
   "name": "personal-account",
+  "homepage": "https://malluma.github.io/personal_account/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -28,7 +29,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "server": "json-server -w server/db.json -p 3001"
+    "server": "json-server -w server/db.json -p 3001",
+    "predeploy": "npm run server",
+    "deploy":  "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -50,6 +53,7 @@
   },
   "devDependencies": {
     "concurrently": "^7.3.0",
+    "gh-pages": "^4.0.0",
     "json-server": "^0.17.0"
   }
 }
