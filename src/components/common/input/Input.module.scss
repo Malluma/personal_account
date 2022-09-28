@@ -1,5 +1,4 @@
 @import "../../../styles//variables.scss";
-
 .input{
   background: $background-color;
   font-family: inherit;
@@ -12,17 +11,14 @@
   width: 100%;
   color: $color-main-darker;
   padding: calc(4px + 1vmin) calc(6px + 1vmin);
-
   &:hover,
   &:focus {
     border: 1px solid $color-main-dark;
     outline: none;
   }
-
   &::placeholder {
     color: $color-main-light;
   }
-
   &_focus {
     border: 1px solid $color-main-dark;
   }

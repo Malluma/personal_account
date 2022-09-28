@@ -5,7 +5,6 @@ import React, { MouseEvent, useState, useRef } from "react";
 import { ReactComponent as Plus } from "../../assets/plus-icon.svg";
 import { ReactComponent as SearchIcon } from "../../assets/search-icon.svg";
 import MaskedInput from 'react-text-mask';
-import Input from "../common/input/Input";
 import Contact from "../contact/Contact";
 
 function Contacts() {
@@ -20,11 +19,6 @@ function Contacts() {
     event.preventDefault();
     dispatch(addContact({ name: newContactName, phone: newContactPhone }));
     cleanLocalContactData();
-  }
-
-  function handleDeleteBtnClick(event: MouseEvent, contactId: string): void {
-    event.preventDefault();
-    dispatch(delContact({ id: contactId}));
   }
 
   function cleanLocalContactData() {

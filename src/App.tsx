@@ -22,16 +22,15 @@ function App() {
       .catch((error) => console.error("error", error));
   }
 
-  
   useEffect(() => {
-  loadContactsFromDB();
+    loadContactsFromDB();
   }, []);
 
   return (
       <div className="App">
         <Routes>
           <Route path='/' element={<LoginForm />} />
-          {<Route path='/contacts' element={<Contacts />} />}
+          {isAuth && <Route path='/contacts' element={<Contacts />} />}
         </Routes> 
       </div>
   );
