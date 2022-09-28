@@ -12,6 +12,22 @@ React, Redux, Typescript, css modules.
 
 Для маски номера телефона использован плагин text-mask: https://github.com/text-mask/text-mask/tree/master/react, https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/types/react-text-mask/index.d.ts#L11.
 
+## Данные для входа в личный кабинет
+"users": [
+    {
+      "email": "ivanov@gmail.com",
+      "password": "123"
+    },
+    {
+      "email": "petrov@yandex.ru",
+      "password": "123456"
+    },
+    {
+      "email": "sidorov@mail.ru",
+      "password": "654321"
+    }
+  ]
+
 node version: v16.13.1 
 
 ## Развертывание проекта
